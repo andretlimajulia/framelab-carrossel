@@ -1,0 +1,1374 @@
+[
+  {
+    "id": "1778537902319",
+    "nome": "Estudo Carrossel 3",
+    "slides": 9,
+    "criadoEm": "2026-05-11T22:18:22.319Z",
+    "dados": {
+      "nome": "Estudo Carrossel 3",
+      "slides": [
+        {
+          "name": "1 ",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#ffffff",
+          "elementos": [
+            {
+              "campo": "img1",
+              "tipo": "img",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "gradient": {
+                "intensity": 100
+              },
+              "imgPanX": 35.347256213629194,
+              "imgPanY": 44.86858411417873,
+              "imgScale": 100,
+              "mask": 0
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(0,0,0,0.1)"
+            },
+            {
+              "campo": "imagemperfil",
+              "tipo": "img",
+              "x": 341,
+              "y": 739.8181818181818,
+              "largura": 57,
+              "altura": 56,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "mask": 0
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 416,
+              "y": 751.8181818181818,
+              "largura": 271,
+              "altura": 34,
+              "fontSize": 28,
+              "fontWeight": "500",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "icone azul",
+              "tipo": "img",
+              "x": 705,
+              "y": 749.8181818181818,
+              "largura": 33,
+              "altura": 38,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              }
+            },
+            {
+              "campo": "texto1",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 30,
+              "y": 822,
+              "largura": 1005,
+              "altura": 332,
+              "fontSize": 96,
+              "fontWeight": "700",
+              "fontFamily": "Poppins",
+              "color": "#83d322",
+              "textAlign": "center",
+              "texto": "ANDRE",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "lineHeight": 1.1,
+              "letterSpacing": 0,
+              "colorTag": "c1"
+            },
+            {
+              "campo": "texto2",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 127,
+              "y": 1163,
+              "largura": 825,
+              "altura": 83,
+              "fontSize": 28,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "center",
+              "texto": "Têm encaixes diferentes para necessidades diferentes — confundir os dois custa tempo e dinheiro.",
+              "colorTag": "c2"
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 1"
+        },
+        {
+          "name": "2",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#7ab61f",
+          "elementos": [
+            {
+              "campo": "texto3",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 31,
+              "y": 106,
+              "largura": 1017,
+              "altura": 376,
+              "fontSize": 96,
+              "fontWeight": "400",
+              "fontFamily": "Impact",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "A comparação começa quase sempre pela pergunta errada."
+            },
+            {
+              "campo": "img2",
+              "tipo": "img",
+              "x": 31,
+              "y": 514,
+              "largura": 1017,
+              "altura": 503,
+              "borderRadius": {
+                "tl": 8,
+                "tr": 8,
+                "br": 8,
+                "bl": 8
+              }
+            },
+            {
+              "campo": "texto4",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 31,
+              "y": 1049,
+              "largura": 1010,
+              "altura": 245,
+              "fontSize": 38,
+              "fontWeight": "600",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "Qual é o melhor modelo? Essa é a pergunta de quem ainda não sabe o que precisa. Classificações ordenam segundo critérios dos laboratórios — não segundo a necessidade de quem vai usar."
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 2"
+        },
+        {
+          "name": "3",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#ffffff",
+          "elementos": [
+            {
+              "campo": "img3",
+              "tipo": "img",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "gradient": {
+                "intensity": 100
+              }
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(0,0,0,0.1)"
+            },
+            {
+              "tipo": "shape",
+              "shape": "circle",
+              "x": 36,
+              "y": 747,
+              "largura": 54,
+              "altura": 54,
+              "borderRadius": {
+                "tl": 999,
+                "tr": 999,
+                "br": 999,
+                "bl": 999
+              },
+              "fillColor": "rgba(27,144,255,1)"
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 53,
+              "y": 774,
+              "largura": 19,
+              "altura": 0,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(27,144,255,1)"
+            },
+            {
+              "campo": "texto5",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 36,
+              "y": 846,
+              "largura": 975,
+              "altura": 192,
+              "fontSize": 39,
+              "fontWeight": "500",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "Avaliações técnicas medem o que é mensurável: nitidez, coerência, fidelidade à instrução. Não medem o que importa para cada uso real."
+            },
+            {
+              "campo": "texto6",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 36,
+              "y": 1015,
+              "largura": 992,
+              "altura": 237,
+              "fontSize": 44,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#83d322",
+              "textAlign": "left",
+              "texto": "Uma imagem com pontuação máxima em avaliação técnica pode ser inútil para quem precisa de automação, edição em lote ou controle estrito de estilo visual.",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "lineHeight": 1.3,
+              "letterSpacing": 0
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 3"
+        },
+        {
+          "name": "4",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#7ab61f",
+          "elementos": [
+            {
+              "campo": "texto7",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 40,
+              "y": 106,
+              "largura": 964,
+              "altura": 523,
+              "fontSize": 122,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "Quatro perguntas antes de comparar.",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "uppercase",
+              "lineHeight": 1,
+              "letterSpacing": 0
+            },
+            {
+              "campo": "img4",
+              "tipo": "img",
+              "x": 40,
+              "y": 626,
+              "largura": 1005,
+              "altura": 545,
+              "borderRadius": {
+                "tl": 1,
+                "tr": 1,
+                "br": 1,
+                "bl": 1
+              },
+              "imgPanX": 50.4594180704441,
+              "imgPanY": 44.642857142857146,
+              "mask": 0
+            },
+            {
+              "campo": "texto8",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 40,
+              "y": 1195,
+              "largura": 1010,
+              "altura": 54,
+              "fontSize": 42,
+              "fontWeight": "600",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "Elas filtram o conjunto de modelos úteis."
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 4"
+        },
+        {
+          "name": "5",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#1b90ff",
+          "elementos": [
+            {
+              "campo": "img5",
+              "tipo": "img",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "gradient": {
+                "intensity": 100
+              }
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(0,0,0,0.1)"
+            },
+            {
+              "tipo": "shape",
+              "shape": "circle",
+              "x": 38,
+              "y": 762,
+              "largura": 54,
+              "altura": 54,
+              "borderRadius": {
+                "tl": 999,
+                "tr": 999,
+                "br": 999,
+                "bl": 999
+              },
+              "fillColor": "rgba(255,255,255,1)"
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 55,
+              "y": 789,
+              "largura": 19,
+              "altura": 0,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(255,255,255,1)"
+            },
+            {
+              "campo": "texto9",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 44,
+              "y": 945,
+              "largura": 944,
+              "altura": 160,
+              "fontSize": 38,
+              "fontWeight": "500",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "Critério ausente gera troca frequente de ferramenta, horas perdidas em configuração e a sensação de que nenhum modelo é suficiente.",
+              "colorTag": "c2"
+            },
+            {
+              "campo": "texto10",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 38,
+              "y": 1125,
+              "largura": 982,
+              "altura": 161,
+              "fontSize": 38,
+              "fontWeight": "900",
+              "fontFamily": "Inter",
+              "color": "#83d322",
+              "textAlign": "left",
+              "texto": "O problema quase nunca é o modelo. É a ausência de definição clara sobre o que o modelo precisa entregar.",
+              "colorTag": "c1"
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 5"
+        },
+        {
+          "name": "6",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#7ab61f",
+          "elementos": [
+            {
+              "campo": "texto11",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 48,
+              "y": 101,
+              "largura": 951,
+              "altura": 339,
+              "fontSize": 100,
+              "fontWeight": "400",
+              "fontFamily": "Impact",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "A necessidade aponta diretamente para o modelo."
+            },
+            {
+              "campo": "img6",
+              "tipo": "img",
+              "x": 38,
+              "y": 485,
+              "largura": 1006,
+              "altura": 400,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "mask": 0,
+              "imgScale": 172,
+              "imgPanX": 36.35761589403974,
+              "imgPanY": 24.842767295597483
+            },
+            {
+              "campo": "texto12",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 38,
+              "y": 931,
+              "largura": 1001,
+              "altura": 176,
+              "fontSize": 36,
+              "fontWeight": "500",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "Estética artística com trabalho manual aponta para Midjourney V8. Integração em produto com acesso programático aponta para FLUX. Controle total do fluxo de produção aponta para Stable Diffusion."
+            },
+            {
+              "campo": "texto13",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 38,
+              "y": 1123,
+              "largura": 1003,
+              "altura": 155,
+              "fontSize": 36,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "O encaixe emerge do critério — não da comparação entre pontuações técnicas que medem qualidade fora de contexto e sem restrição de uso real."
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 6"
+        },
+        {
+          "name": "7",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#ffffff",
+          "elementos": [
+            {
+              "campo": "texto14",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 39,
+              "y": 125,
+              "largura": 1006,
+              "altura": 248,
+              "fontSize": 102,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#83d322",
+              "textAlign": "left",
+              "texto": "O custo tem mais de uma dimensão.",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "lineHeight": 1,
+              "letterSpacing": 0
+            },
+            {
+              "campo": "img7",
+              "tipo": "img",
+              "x": 39,
+              "y": 393,
+              "largura": 1006,
+              "altura": 697,
+              "borderRadius": {
+                "tl": 8,
+                "tr": 8,
+                "br": 8,
+                "bl": 8
+              }
+            },
+            {
+              "campo": "texto15",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 39,
+              "y": 1113,
+              "largura": 999,
+              "altura": 196,
+              "fontSize": 40,
+              "fontWeight": "600",
+              "fontFamily": "Inter",
+              "color": "#424242",
+              "textAlign": "left",
+              "texto": "Existe custo de configuração — tempo técnico de instalação. Custo de dependência — plataforma fechada sem saída. Custo de escala — modelo barato no início que trava no volume médio."
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#424242",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#424242",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#424242",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 7"
+        },
+        {
+          "name": "8",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#1b90ff",
+          "elementos": [
+            {
+              "campo": "img8",
+              "tipo": "img",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "gradient": {
+                "intensity": 100
+              }
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(0,0,0,0.1)"
+            },
+            {
+              "tipo": "shape",
+              "shape": "circle",
+              "x": 36,
+              "y": 711,
+              "largura": 54,
+              "altura": 54,
+              "borderRadius": {
+                "tl": 999,
+                "tr": 999,
+                "br": 999,
+                "bl": 999
+              },
+              "fillColor": "rgba(255,255,255,1)"
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 53,
+              "y": 738,
+              "largura": 19,
+              "altura": 0,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(255,255,255,1)"
+            },
+            {
+              "campo": "texto16",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 36,
+              "y": 885,
+              "largura": 927,
+              "altura": 151,
+              "fontSize": 40,
+              "fontWeight": "500",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "texto": "O processo como princípio: definir para quê → mapear restrições → identificar encaixe → só então comparar dentro do conjunto já filtrado."
+            },
+            {
+              "campo": "texto17",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 36,
+              "y": 1062,
+              "largura": 969,
+              "altura": 208,
+              "fontSize": 40,
+              "fontWeight": "900",
+              "fontFamily": "Inter",
+              "color": "#83d322",
+              "textAlign": "left",
+              "texto": "Comparar antes de filtrar é ruído. Comparar depois de filtrar é decisão. A diferença está em quando a necessidade real entra no processo."
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 8"
+        },
+        {
+          "name": "9",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#1b90ff",
+          "elementos": [
+            {
+              "campo": "img9",
+              "tipo": "img",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1689,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "gradient": {
+                "intensity": 100
+              },
+              "imgPanX": 49.85754985754986,
+              "imgPanY": 60.47358834244083,
+              "imgScale": 100,
+              "mask": 0
+            },
+            {
+              "tipo": "shape",
+              "shape": "rect",
+              "x": 0,
+              "y": 0,
+              "largura": 1080,
+              "altura": 1350,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              },
+              "fillColor": "rgba(0,0,0,0.1)"
+            },
+            {
+              "campo": "imagemperfil",
+              "tipo": "img",
+              "x": 53,
+              "y": 987,
+              "largura": 57,
+              "altura": 57,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              }
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 128,
+              "y": 999,
+              "largura": 271,
+              "altura": 34,
+              "fontSize": 28,
+              "fontWeight": "500",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "icone azul",
+              "tipo": "img",
+              "x": 417,
+              "y": 997,
+              "largura": 33,
+              "altura": 38,
+              "borderRadius": {
+                "tl": 0,
+                "tr": 0,
+                "br": 0,
+                "bl": 0
+              }
+            },
+            {
+              "campo": "texto18",
+              "tipo": "txt",
+              "fixo": false,
+              "x": 57,
+              "y": 1033,
+              "largura": 967,
+              "altura": 236,
+              "fontSize": 56,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#83d322",
+              "textAlign": "left",
+              "texto": "A necessidade real não simplifica a escolha. Elimina a comparação desnecessária.",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "lineHeight": 1.2,
+              "letterSpacing": 0.5
+            },
+            {
+              "campo": "Perfil",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 38,
+              "y": 24,
+              "largura": 152,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "@estrategiaconcursos"
+            },
+            {
+              "campo": "nome",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 731,
+              "y": 24,
+              "largura": 144,
+              "altura": 13,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "textoFixo": "Estrategia Concursos"
+            },
+            {
+              "campo": "®copyright 2025",
+              "tipo": "txt",
+              "fixo": true,
+              "x": 914,
+              "y": 24,
+              "largura": 128,
+              "altura": 16,
+              "fontSize": 11,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "right",
+              "textoFixo": "®copyright 2026"
+            }
+          ],
+          "nome": "Slide 9"
+        }
+      ],
+      "_activePaletteId": "1778543470038"
+    },
+    "atualizadoEm": "2026-05-13T21:25:05.817Z"
+  },
+  {
+    "id": "1778676901530",
+    "nome": "teste",
+    "slides": 2,
+    "criadoEm": "2026-05-13T12:55:01.530Z",
+    "dados": {
+      "nome": "teste",
+      "w": 1080,
+      "h": 1350,
+      "bg": "#ffffff",
+      "slides": [
+        {
+          "name": "Slide 1",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#ffffff",
+          "elementos": [
+            {
+              "tipo": "txt",
+              "campo": "texto1",
+              "fixo": false,
+              "x": 80,
+              "y": 697,
+              "largura": 920,
+              "altura": 324,
+              "fontSize": 108,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#83d322",
+              "textAlign": "left",
+              "lineHeight": 1,
+              "letterSpacing": 0,
+              "texto": "ANDRE ANDREANDREANDREANDR",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "colorTag": "c1"
+            },
+            {
+              "tipo": "txt",
+              "campo": "texto2",
+              "fixo": false,
+              "x": 80,
+              "y": 1047,
+              "largura": 920,
+              "altura": 113,
+              "fontSize": 40,
+              "fontWeight": "400",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "lineHeight": 1.2,
+              "letterSpacing": 0,
+              "texto": "LUIZ LUIZ LUIZ LUIZ LUIZ LUIZ LUIZ LUIZ",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "colorTag": "c2"
+            },
+            {
+              "tipo": "img",
+              "campo": "img1",
+              "x": 79,
+              "y": 143,
+              "largura": 923,
+              "altura": 509,
+              "borderRadius": {
+                "tl": 8,
+                "tr": 8,
+                "br": 8,
+                "bl": 8
+              },
+              "mask": 0
+            },
+            {
+              "tipo": "sticker",
+              "campo": "sticker1",
+              "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABOCAYAAAC60+EBAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAA2lJREFUeAHtnF1SE0EQgHs2oK85AgfQVLxBOIEoWGURqoQTyA3EE4gnAAXLBwvCDShPQKwI+hhvEKt8ct0Zpzck0fzuZuenl+mPB+CFmvro6fnrjgAPbNVODiSIxwJEFaihVHf4o4DqxBiVWlv4J4RoC3DMZu30GBS8gDuMAtWNwCEhSB2wAg7YqB9VK3L1MBSpiHWxKDWSq5daah0CwmoqGEgVgUlFrIkNWSpiRWzoUhHjYllqH6NiWeoIY7uC5/WPa7GUl1lOJiFgJGJZ6iSFxbLU6RQSy1Jns7RYljqfpcSy1MVUICcsdTEi/coBS81O5lTwrP6hzlKzk0ns04fvd6VULDUHC8Xi+5SA6Ejfp9J7nyLM3By7VTvdVwreAJObuXcFiYqu9LcGMAzDMAzDMAwtnBfFIVsPThoq0qc5q6hq5tOigJ6KoX7+becHGMJJ7da/4L2DAqGPyArIYOG47rTacHjvEADOxKaRqsQrCAQnYlFqKJE6wLrYEKUiVsWGlFPHsSYWpYaUU8exIjZ0qYhxsSy1j1GxLHWEsZPXZu3kUEt9CUyKEbEh9W9lpXAqYKnTWTpi06a4ZLWlpTaAmWApscOmOOBeg1nkFsuFcdnIlWMJSe1JiBr6hvoCiJJZLBWp2LKexPGjVmf7s/61B0TJJJaSVBn/Wb/4vtcF4iwUiwvVb5m0vEtV0C6LVGTu4kWl0zCV+itev+jukZ3648yMWJz+FXnvyn/7pjgum1RkasTSWf3F8VmnuQclZCJiySxUShyUVSryn1hKUs+/Nl9DiRmK7XfFJFdlkqq3X7T3sSi13xXjt4Ejd6QqQVfsqNWoZFKJs3LbauQXJfa11Lfgj568H/8EgzgviptAwu7ZdfMd+KMXJWL9rGN2n+y0KG6CVOrO8lKFKpy+UOqnm2YbDONPbFGpkHZZFxOrx2BDKuJHrAGp1MegxYouuCQAqYjbxcu/VHx52Ghdp5fkVnEnloDUdPW/2baSU8dxk2OJSLW1UE3DdsQ6m3qzwOecShI9cSkV0RE7+rBvw6RRcvvo54XBG5lrqYitVOB86o3j++HRhljvUnEMvh8eTYslIRXH4Ps116RYEtOfwD82xdSugExOPSdSd2AiYoNfqKZRVKxXqUpBl2rZUQGxwns+E4n8QrXs6C9Ovzg7ZXFqowAAAABJRU5ErkJggg==",
+              "x": 953,
+              "y": 79,
+              "largura": 44,
+              "altura": 44
+            }
+          ],
+          "nome": "Slide 1"
+        },
+        {
+          "name": "Slide 2",
+          "w": 1080,
+          "h": 1350,
+          "bg": "#7ab61f",
+          "elementos": [
+            {
+              "tipo": "txt",
+              "campo": "texto3",
+              "fixo": false,
+              "x": 80,
+              "y": 697,
+              "largura": 920,
+              "altura": 324,
+              "fontSize": 108,
+              "fontWeight": "700",
+              "fontFamily": "Inter",
+              "color": "#83d322",
+              "textAlign": "left",
+              "lineHeight": 1,
+              "letterSpacing": 0,
+              "texto": "ANDRE ANDREANDREANDREANDR",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "colorTag": "c1"
+            },
+            {
+              "tipo": "txt",
+              "campo": "texto4",
+              "fixo": false,
+              "x": 80,
+              "y": 1047,
+              "largura": 920,
+              "altura": 113,
+              "fontSize": 40,
+              "fontWeight": "400",
+              "fontFamily": "Inter",
+              "color": "#ffffff",
+              "textAlign": "left",
+              "lineHeight": 1.2,
+              "letterSpacing": 0,
+              "texto": "LUIZ LUIZ LUIZ LUIZ LUIZ LUIZ LUIZ LUIZ",
+              "fontStyle": "",
+              "textDecoration": "",
+              "textTransform": "",
+              "colorTag": "c2"
+            },
+            {
+              "tipo": "img",
+              "campo": "img2",
+              "x": 79,
+              "y": 143,
+              "largura": 923,
+              "altura": 509,
+              "borderRadius": {
+                "tl": 8,
+                "tr": 8,
+                "br": 8,
+                "bl": 8
+              },
+              "mask": 0
+            },
+            {
+              "tipo": "sticker",
+              "campo": "sticker2",
+              "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAABOCAYAAAC60+EBAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAA2lJREFUeAHtnF1SE0EQgHs2oK85AgfQVLxBOIEoWGURqoQTyA3EE4gnAAXLBwvCDShPQKwI+hhvEKt8ct0Zpzck0fzuZuenl+mPB+CFmvro6fnrjgAPbNVODiSIxwJEFaihVHf4o4DqxBiVWlv4J4RoC3DMZu30GBS8gDuMAtWNwCEhSB2wAg7YqB9VK3L1MBSpiHWxKDWSq5daah0CwmoqGEgVgUlFrIkNWSpiRWzoUhHjYllqH6NiWeoIY7uC5/WPa7GUl1lOJiFgJGJZ6iSFxbLU6RQSy1Jns7RYljqfpcSy1MVUICcsdTEi/coBS81O5lTwrP6hzlKzk0ns04fvd6VULDUHC8Xi+5SA6Ejfp9J7nyLM3By7VTvdVwreAJObuXcFiYqu9LcGMAzDMAzDMAwtnBfFIVsPThoq0qc5q6hq5tOigJ6KoX7+becHGMJJ7da/4L2DAqGPyArIYOG47rTacHjvEADOxKaRqsQrCAQnYlFqKJE6wLrYEKUiVsWGlFPHsSYWpYaUU8exIjZ0qYhxsSy1j1GxLHWEsZPXZu3kUEt9CUyKEbEh9W9lpXAqYKnTWTpi06a4ZLWlpTaAmWApscOmOOBeg1nkFsuFcdnIlWMJSe1JiBr6hvoCiJJZLBWp2LKexPGjVmf7s/61B0TJJJaSVBn/Wb/4vtcF4iwUiwvVb5m0vEtV0C6LVGTu4kWl0zCV+itev+jukZ3648yMWJz+FXnvyn/7pjgum1RkasTSWf3F8VmnuQclZCJiySxUShyUVSryn1hKUs+/Nl9DiRmK7XfFJFdlkqq3X7T3sSi13xXjt4Ejd6QqQVfsqNWoZFKJs3LbauQXJfa11Lfgj568H/8EgzgviptAwu7ZdfMd+KMXJWL9rGN2n+y0KG6CVOrO8lKFKpy+UOqnm2YbDONPbFGpkHZZFxOrx2BDKuJHrAGp1MegxYouuCQAqYjbxcu/VHx52Ghdp5fkVnEnloDUdPW/2baSU8dxk2OJSLW1UE3DdsQ6m3qzwOecShI9cSkV0RE7+rBvw6RRcvvo54XBG5lrqYitVOB86o3j++HRhljvUnEMvh8eTYslIRXH4Ps116RYEtOfwD82xdSugExOPSdSd2AiYoNfqKZRVKxXqUpBl2rZUQGxwns+E4n8QrXs6C9Ovzg7ZXFqowAAAABJRU5ErkJggg==",
+              "x": 953,
+              "y": 79,
+              "largura": 44,
+              "altura": 44
+            }
+          ],
+          "nome": "Slide 1"
+        }
+      ],
+      "_activePaletteId": "1778543470038"
+    },
+    "atualizadoEm": "2026-05-13T21:26:51.682Z"
+  }
+]
