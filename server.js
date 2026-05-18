@@ -74,8 +74,8 @@ app.get('/api/health', (_req, res) => {
 // Listar todos os templates (sem os dados completos — só metadados)
 app.get('/api/templates', (_req, res) => {
   try {
-    const list = readTemplates().map(({ id, nome, slides, criadoEm, atualizadoEm }) => ({
-      id, nome, slides, criadoEm, atualizadoEm
+    const list = readTemplates().map(({ id, nome, slides, criadoEm, atualizadoEm, thumb }) => ({
+      id, nome, slides, criadoEm, atualizadoEm, thumb
     }));
     res.json(list);
   } catch (err) {
@@ -98,7 +98,7 @@ app.get('/api/templates/:id', (req, res) => {
 // Salvar template (cria ou atualiza)
 app.post('/api/templates', (req, res) => {
   try {
-    const { id, nome, dados } = req.body;
+    const { id, nome, dados, thumb } = req.body;
     if (!nome) return res.status(400).json({ error: 'Nome é obrigatório' });
     if (!dados) return res.status(400).json({ error: 'Dados do template são obrigatórios' });
 
@@ -111,6 +111,7 @@ app.post('/api/templates', (req, res) => {
       nome:        nome.trim(),
       slides:      Array.isArray(dados.slides) ? dados.slides.length : 0,
       criadoEm:    now,
+      thumb:       thumb || null,
       dados:       dados,   // objeto completo: { nome, slides: [...] }
     };
 
@@ -118,6 +119,8 @@ app.post('/api/templates', (req, res) => {
     if (idx >= 0) {
       template.criadoEm    = list[idx].criadoEm;
       template.atualizadoEm = now;
+      // preserva thumb antiga se o cliente não mandou nova
+      if (!thumb) template.thumb = list[idx].thumb || null;
       list[idx] = template;
     } else {
       list.push(template);
@@ -133,7 +136,7 @@ app.post('/api/templates', (req, res) => {
 // Atualizar template existente (salvar edições)
 app.put('/api/templates/:id', (req, res) => {
   try {
-    const { nome, dados } = req.body;
+    const { nome, dados, thumb } = req.body;
     const list = readTemplates();
     const idx = list.findIndex(t => t.id === req.params.id);
     if (idx < 0) return res.status(404).json({ error: 'Template não encontrado' });
@@ -142,6 +145,7 @@ app.put('/api/templates/:id', (req, res) => {
       nome: nome || list[idx].nome,
       dados: dados || list[idx].dados,
       slides: dados && dados.slides ? dados.slides.length : list[idx].slides,
+      thumb: thumb !== undefined ? thumb : list[idx].thumb,
       atualizadoEm: new Date().toISOString(),
     };
     writeTemplates(list);

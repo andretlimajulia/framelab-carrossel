@@ -3181,8 +3181,11 @@ function _populateSavedTemplates(list) {
     const item = document.createElement('div');
     item.className = 'dd-item';
     item.dataset.savedId = t.id;
+    const preview = t.thumb
+      ? '<img class="dd-item-dot" src="'+t.thumb+'" style="object-fit:cover;display:block">'
+      : '<div class="dd-item-dot" style="background:linear-gradient(135deg,#6366f1,#8B5CF6)"></div>';
     item.innerHTML =
-      '<div class="dd-item-dot" style="background:linear-gradient(135deg,#6366f1,#8B5CF6)"></div>' +
+      preview +
       '<div class="dd-item-info">' +
         '<div class="dd-item-name">' + t.nome + '</div>' +
         '<div class="dd-item-meta">' + (t.slides||'?') + ' slides</div>' +
@@ -3411,8 +3414,9 @@ function saveCurrentTemplate(){
 
   (async()=>{
     try{
+      const thumb=await _generateThumb();
       if(_serverAvailable){
-        const payload=JSON.stringify({nome,dados});
+        const payload=JSON.stringify({nome,dados,thumb});
         const sizeMB=(payload.length/1024/1024).toFixed(1);
         console.log('Saving template: '+sizeMB+'MB');
         if(_currentTemplateId){
@@ -3432,16 +3436,16 @@ function saveCurrentTemplate(){
             _currentTemplateId=existing.id;
             const r=await fetch(API_BASE+'/api/templates/'+existing.id,{
               method:'PUT',headers:{'Content-Type':'application/json'},
-              body:JSON.stringify({nome,dados})
+              body:JSON.stringify({nome,dados,thumb})
             });
             if(!r.ok)throw new Error('Server error '+r.status);
           } else {
             const r=await fetch(API_BASE+'/api/templates',{
               method:'POST',headers:{'Content-Type':'application/json'},
-              body:JSON.stringify({nome,dados})
+              body:JSON.stringify({nome,dados,thumb})
             });
             if(r.ok){const saved=await r.json();_currentTemplateId=saved.id;
-              _populateSavedTemplates([{id:saved.id,nome:saved.nome,slides:saved.slides}]);}
+              _populateSavedTemplates([{id:saved.id,nome:saved.nome,slides:saved.slides,thumb}]);}
           }
         }
       } else {
@@ -3646,6 +3650,18 @@ async function _renderSlideToCanvas(sIdx,exportScale){
     }
   }
   return cv;
+}
+
+async function _generateThumb(maxWidth){
+  maxWidth=maxWidth||320;
+  if(!importedTemplate||!importedTemplate.slides||!importedTemplate.slides.length)return null;
+  const slide0=importedTemplate.slides[0];
+  const sw=slide0.w||importedTemplate.w||1080;
+  const scale=maxWidth/sw;
+  try{
+    const cv=await _renderSlideToCanvas(0,scale);
+    return cv.toDataURL('image/jpeg',0.72);
+  }catch(e){return null;}
 }
 
 async function exportAllSlides(){
