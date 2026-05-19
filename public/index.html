@@ -211,7 +211,7 @@ body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(r
 </div>
 
 <script>
-const API = 'http://localhost:3001';
+const API = (location.protocol === 'file:') ? 'http://localhost:3001' : '';
 const FMT = {'1080x1080':'Quadrado','1080x1350':'Carrossel','1080x1920':'Story','1920x1080':'Horizontal'};
 
 async function loadTemplates(){

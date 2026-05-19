@@ -106,7 +106,7 @@ html,body{height:100%;background:var(--bg);font-family:var(--font);font-size:13p
 .typo-field-tag{display:flex;align-items:center;gap:5px;margin-bottom:2px}
 .typo-field-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex-shrink:0}
 .typo-field-name{font-size:11px;font-weight:600;color:var(--accent2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.font-sel{width:100%;height:28px;border-radius:var(--rs);border:1px solid var(--fb);background:var(--surface);color:var(--t1);font:400 12px var(--font);padding:0 8px;outline:none;cursor:pointer}
+.font-sel{width:100%;height:28px;border-radius:var(--rs);border:1px solid var(--fb);background:var(--surface);color:var(--t1);font:400 12px var(--font);padding:0 8px;outline:none;cursor:pointer;margin-bottom:10px}
 .font-sel option{background:#18181F;color:#e5e7eb}
 .typo-btns{display:flex;gap:4px;flex-wrap:wrap}
 .ty-btn{height:28px;min-width:28px;padding:0 6px;border-radius:6px;border:1px solid var(--border2);background:var(--surface);color:var(--t2);font:600 12px var(--font);cursor:pointer;transition:all var(--tf);display:flex;align-items:center;justify-content:center}
@@ -480,7 +480,22 @@ html,body{height:100%;background:var(--bg);font-family:var(--font);font-size:13p
 .save-btn svg{width:11px;height:11px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round}
 .save-btn.saved{background:#4ADE80;color:#000}
 .save-btn.saving{opacity:.6;pointer-events:none}
-.save-indicator{font-size:9px;color:var(--t3);white-space:nowrap}
+.save-indicator{font-size:9px;color:var(--t3);white-space:nowrap;transition:color .15s}
+.save-indicator.dirty{color:#FBBF24}
+.save-indicator.saving{color:var(--accent2)}
+.save-indicator.error{color:#F87171}
+
+/* nome editável de campo (caixa de texto / imagem) — click pra renomear */
+.field-name-editable{cursor:text;border-radius:3px;padding:1px 4px;margin:-1px -4px;transition:background .15s,box-shadow .15s;outline:none}
+.field-name-editable:hover{background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.13)}
+.field-name-editable.field-name-editing{background:rgba(139,92,246,.12);box-shadow:inset 0 0 0 1.5px #8B5CF6;cursor:text;user-select:text}
+
+/* toasts */
+.toast-root{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:8px;z-index:9999;pointer-events:none}
+.toast{background:#18181F;border:1px solid var(--border2);border-left:3px solid var(--accent);color:var(--t1);padding:10px 14px;border-radius:8px;font:500 12px var(--font);box-shadow:0 8px 24px rgba(0,0,0,.45);min-width:200px;max-width:360px;pointer-events:auto;opacity:0;transform:translateX(20px);transition:opacity .2s ease,transform .2s ease}
+.toast.in{opacity:1;transform:translateX(0)}
+.toast.success{border-left-color:#4ADE80}
+.toast.error{border-left-color:#F87171}
 
 .dd-item-del{width:22px;height:22px;border-radius:5px;border:none;background:transparent;
   color:var(--t3);cursor:pointer;display:flex;align-items:center;justify-content:center;
@@ -780,7 +795,7 @@ html,body{height:100%;background:var(--bg);font-family:var(--font);font-size:13p
       <div class="typo-ctrl" id="typoCtrl" style="display:none">
         <div class="typo-field-tag" style="display:flex;align-items:center">
           <div class="typo-field-dot"></div>
-          <span class="typo-field-name" id="typoFieldName">campo</span>
+          <span class="typo-field-name field-name-editable" id="typoFieldName" title="Clique para renomear" onclick="_tmplStartFieldRename(this)">campo</span>
           <button id="typoDeleteBtn" onclick="_tmplDeleteSelected()" title="Deletar (Delete)"
             style="display:none;margin-left:auto;width:22px;height:22px;border-radius:5px;border:1px solid rgba(248,113,113,.3);background:transparent;color:rgba(248,113,113,.6);cursor:pointer;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0"
             onmouseover="this.style.background='rgba(248,113,113,.15)';this.style.color='#F87171'" onmouseout="this.style.background='transparent';this.style.color='rgba(248,113,113,.6)'">
@@ -859,7 +874,7 @@ html,body{height:100%;background:var(--bg);font-family:var(--font);font-size:13p
         <!-- campo name -->
         <div style="display:flex;align-items:center;gap:6px;padding:6px 8px;border-radius:6px;background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.15)">
           <div style="width:7px;height:7px;border-radius:50%;background:var(--pink);flex-shrink:0"></div>
-          <span style="font:600 11px var(--mono);color:var(--pink2)" id="imgPropsName">img1</span>
+          <span class="field-name-editable" style="font:600 11px var(--mono);color:var(--pink2)" id="imgPropsName" title="Clique para renomear" onclick="_tmplStartFieldRename(this)">img1</span>
           <button onclick="_tmplDeleteSelected()" title="Deletar (Delete)"
             style="margin-left:auto;width:22px;height:22px;border-radius:5px;border:1px solid rgba(248,113,113,.3);background:transparent;color:rgba(248,113,113,.6);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0"
             onmouseover="this.style.background='rgba(248,113,113,.15)';this.style.color='#F87171'" onmouseout="this.style.background='transparent';this.style.color='rgba(248,113,113,.6)'">
@@ -1175,7 +1190,7 @@ html,body{height:100%;background:var(--bg);font-family:var(--font);font-size:13p
             <!-- header -->
             <div style="display:flex;align-items:center;gap:8px">
               <div style="width:8px;height:8px;border-radius:50%;background:var(--pink);flex-shrink:0"></div>
-              <span style="font:600 11px var(--mono);color:var(--pink2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="imgSideModalName">img1</span>
+              <span class="field-name-editable" style="font:600 11px var(--mono);color:var(--pink2);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" id="imgSideModalName" title="Clique para renomear" onclick="_tmplStartFieldRename(this)">img1</span>
               <button onclick="_tmplDeleteSelected()" title="Deletar (Delete)"
                 style="width:22px;height:22px;border-radius:5px;border:1px solid rgba(248,113,113,.3);background:transparent;color:rgba(248,113,113,.5);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0"
                 onmouseover="this.style.background='rgba(248,113,113,.15)';this.style.color='#F87171'" onmouseout="this.style.background='transparent';this.style.color='rgba(248,113,113,.5)'">
@@ -2568,12 +2583,30 @@ function fitZoom(){
   setZoom(Math.min(zW,zH));
 }
 
-// keyboard shortcuts: Ctrl+= zoom in, Ctrl+- zoom out, Ctrl+0 fit
+// keyboard shortcuts: Ctrl+= zoom in, Ctrl+- zoom out, Ctrl+0 fit, Ctrl+S save, Ctrl+D duplicar
 document.addEventListener('keydown',ev=>{
   if(!ev.ctrlKey&&!ev.metaKey)return;
-  if(ev.key==='='||ev.key==='+'){ev.preventDefault();setZoom(_zoom+0.25);}
-  if(ev.key==='-'){ev.preventDefault();setZoom(_zoom-0.25);}
-  if(ev.key==='0'){ev.preventDefault();fitZoom();}
+  // ignora atalhos enquanto digita em campo de texto (exceto Ctrl+S, que é universal)
+  const tag = document.activeElement && document.activeElement.tagName;
+  const inField = tag === 'INPUT' || tag === 'TEXTAREA' || (document.activeElement && document.activeElement.isContentEditable);
+  if(ev.key==='='||ev.key==='+'){ev.preventDefault();setZoom(_zoom+0.25);return;}
+  if(ev.key==='-'){ev.preventDefault();setZoom(_zoom-0.25);return;}
+  if(ev.key==='0'){ev.preventDefault();fitZoom();return;}
+  if(ev.key==='s'||ev.key==='S'){
+    ev.preventDefault();
+    if(typeof saveCurrentTemplate === 'function' && importedMode && importedTemplate){
+      saveCurrentTemplate();
+    }
+    return;
+  }
+  if((ev.key==='d'||ev.key==='D') && !inField){
+    ev.preventDefault();
+    if(typeof _tmplDuplicateSelected==='function' && _tmplDuplicateSelected()) return;
+    if(typeof tmplDuplicateSlide==='function' && importedMode && importedTemplate){
+      tmplDuplicateSlide();
+      if(typeof _toast==='function') _toast('Slide duplicado', 'success');
+    }
+  }
 });
 
 // Ctrl+scroll to zoom
@@ -3124,7 +3157,10 @@ function toggleAccordion(secId){
    SERVER API — conecta ao servidor local ou usa localStorage
 ══════════════════════════════════════════════════════ */
 
-const API_BASE = 'http://localhost:3001';
+// Quando a página é servida via http (Express), usa caminho relativo — assim
+// funciona em qualquer host/porta sem precisar editar a constante.
+// Quando aberta direto via file://, cai no localhost padrão.
+const API_BASE = (location.protocol === 'file:') ? 'http://localhost:3001' : '';
 var _serverAvailable = false;
 var _pendingImportData = null;
 
@@ -3392,21 +3428,59 @@ function _activateTemplateMode() {
   }
 })();
 
+/* ── Toasts ── */
+function _toast(msg, type='info', duration=3000){
+  let root = document.getElementById('toastRoot');
+  if(!root){
+    root = document.createElement('div');
+    root.id = 'toastRoot';
+    root.className = 'toast-root';
+    document.body.appendChild(root);
+  }
+  const el = document.createElement('div');
+  el.className = 'toast' + (type==='success'?' success':type==='error'?' error':'');
+  el.textContent = msg;
+  root.appendChild(el);
+  // trigger animation after append
+  requestAnimationFrame(()=>el.classList.add('in'));
+  setTimeout(()=>{
+    el.classList.remove('in');
+    setTimeout(()=>el.remove(), 220);
+  }, duration);
+}
+
 /* ── Save current template ── */
 var _autoSaveTimer = null;
 var _lastSavedHash = '';
 var _currentTemplateId = null; // set when template is loaded from server
 
+// Estado central do indicador de save no header.
+// Estados: 'dirty' (alterações pendentes) | 'saving' | 'saved' | 'error'
+function _setSaveState(state, opts){
+  const ind = document.getElementById('saveIndicator');
+  const btn = document.getElementById('saveBtn');
+  if(!ind && !btn) return;
+  if(ind){
+    ind.classList.remove('dirty','saving','error');
+    if(state==='dirty'){ ind.classList.add('dirty'); ind.textContent='Mudanças não salvas'; }
+    else if(state==='saving'){ ind.classList.add('saving'); ind.textContent='Salvando...'; }
+    else if(state==='saved'){ ind.textContent='Salvo ' + new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }
+    else if(state==='error'){ ind.classList.add('error'); ind.textContent=(opts && opts.msg) || 'Erro ao salvar'; }
+  }
+}
+
 function _scheduleAutoSave(){
   if(!importedMode||!importedTemplate)return;
+  _setSaveState('dirty');
   clearTimeout(_autoSaveTimer);
-  _autoSaveTimer=setTimeout(saveCurrentTemplate,30000); // 30s
+  _autoSaveTimer=setTimeout(saveCurrentTemplate,2000); // 2s
 }
 
 function saveCurrentTemplate(){
   if(!importedMode||!importedTemplate)return;
   clearTimeout(_autoSaveTimer);
   const btn=document.getElementById('saveBtn');
+  _setSaveState('saving');
   if(btn){btn.classList.add('saving');btn.textContent='Salvando...';}
 
   const dados=_templateLayoutOnly(importedTemplate); // strip images to keep size small
@@ -3457,19 +3531,20 @@ function saveCurrentTemplate(){
         localStorage.setItem('framelab_templates',JSON.stringify(list));
       }
       // Success feedback
+      _setSaveState('saved');
       if(btn){
         btn.classList.remove('saving');
         btn.innerHTML='<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Salvo!';
         btn.classList.add('saved');
-        const ind=document.getElementById('saveIndicator');
-        if(ind)ind.textContent='Salvo '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
         setTimeout(()=>{
           btn.classList.remove('saved');
           btn.innerHTML='<svg viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>Salvar';
         },2500);
       }
-      _scheduleAutoSave();
     }catch(err){
+      console.error('[saveCurrentTemplate]', err);
+      _setSaveState('error');
+      _toast('Erro ao salvar: ' + (err.message || 'falha de rede'), 'error', 4000);
       if(btn){btn.classList.remove('saving');btn.textContent='Erro ao salvar';}
       setTimeout(()=>{if(btn)btn.textContent='Salvar';},2000);
     }
@@ -4501,10 +4576,18 @@ function _tmplAllEls() {
   return all;
 }
 function _tmplNextName(prefix) {
-  const nums = _tmplAllEls()
-    .filter(e => e.campo && e.campo.startsWith(prefix))
-    .map(e => parseInt(e.campo.replace(prefix,'')) || 0);
-  return prefix + (nums.length ? Math.max(...nums) + 1 : 1);
+  // Retorna o MENOR número livre — assim, ao adicionar uma nova caixa
+  // depois de deletar uma intermediária, o nome deletado é reaproveitado.
+  // Ex: existem texto1 e texto3 → próximo é texto2.
+  const used = new Set(
+    _tmplAllEls()
+      .filter(e => e.campo && e.campo.startsWith(prefix))
+      .map(e => parseInt(e.campo.slice(prefix.length), 10))
+      .filter(n => !isNaN(n) && n > 0)
+  );
+  let n = 1;
+  while (used.has(n)) n++;
+  return prefix + n;
 }
 
 function tmplAddTxt() {
@@ -4699,31 +4782,88 @@ function _tmplDeleteSelected() {
 
   // remove o elemento
   s.elementos.splice(deletedIdx, 1);
-
-  // renomeia automaticamente os restantes do mesmo tipo em TODOS os slides
-  // para manter sequência contínua: img1, img2... / texto1, texto2...
-  if (deletedTipo === 'img') {
-    _renameSequential('img');
-  } else if (deletedTipo === 'txt') {
-    _renameSequential('texto');
-  }
+  // Não renumera os restantes — o nome deletado vira "buraco" e é reaproveitado
+  // pelo próximo add (ver _tmplNextName), preservando a identidade dos campos
+  // que o usuário não tocou.
 
   _renderImported(cur);
   _buildImportedThumbs();
 }
 
-function _renameSequential(prefix) {
-  // coleta todos os campos desse prefixo em ordem de aparição (slide por slide)
-  let counter = 1;
-  importedTemplate.slides.forEach(s => {
-    (s.elementos || []).forEach(el => {
-      if (el.tipo === (prefix === 'img' ? 'img' : 'txt') &&
-          el.campo && el.campo.startsWith(prefix) &&
-          !el.fixo) {
-        el.campo = prefix + counter;
-        counter++;
+// Renomeio inline do campo selecionado a partir do span de cabeçalho do painel.
+// Faz a span virar editável (contenteditable), valida unicidade e propaga em
+// todos os slides (texto/imagem aparecem com o mesmo nome em todos os slides).
+function _tmplStartFieldRename(spanEl){
+  if(!_isTemplateMode || !importedTemplate || !spanEl) return;
+  // descobre o elemento atualmente selecionado
+  let ei = -1, tipo = null;
+  if(typeof selTxt !== 'undefined' && selTxt){ ei = selTxt.bIdx; tipo = 'txt'; }
+  else if(typeof selImg !== 'undefined' && selImg){ ei = selImg.bIdx; tipo = 'img'; }
+  else return;
+  const el = importedTemplate.slides[cur] && importedTemplate.slides[cur].elementos[ei];
+  if(!el || el.fixo) return;
+
+  const oldName = el.campo || '';
+  // mostra apenas o nome bruto durante a edição (sem "- slide N")
+  const baseText = spanEl.textContent;
+  spanEl.textContent = oldName;
+  spanEl.contentEditable = 'true';
+  spanEl.classList.add('field-name-editing');
+  spanEl.focus();
+  // seleciona tudo
+  const range = document.createRange();
+  range.selectNodeContents(spanEl);
+  const sel = window.getSelection();
+  sel.removeAllRanges(); sel.addRange(range);
+
+  let done = false;
+  function finish(cancel){
+    if(done) return; done = true;
+    spanEl.contentEditable = 'false';
+    spanEl.classList.remove('field-name-editing');
+    if(cancel){ spanEl.textContent = baseText; return; }
+    const newName = (spanEl.textContent || '').trim();
+    if(!newName){
+      spanEl.textContent = baseText;
+      if(typeof _toast === 'function') _toast('Nome não pode ser vazio', 'error');
+      return;
+    }
+    if(newName === oldName){ spanEl.textContent = baseText; return; }
+    // checa duplicata entre elementos do MESMO tipo
+    const dup = importedTemplate.slides.some(s => (s.elementos||[]).some(other =>
+      other !== el && !other.fixo && other.tipo === el.tipo && other.campo === newName
+    ));
+    if(dup){
+      spanEl.textContent = baseText;
+      if(typeof _toast === 'function') _toast('Já existe um campo "' + newName + '"', 'error');
+      return;
+    }
+    el.campo = newName;
+    // propaga: como o mesmo "campo" aparece nos N slides, basta renomear
+    // todas as ocorrências do oldName no mesmo tipo (caso o template tenha sido
+    // construído com replicação cross-slide)
+    importedTemplate.slides.forEach(s => (s.elementos||[]).forEach(other => {
+      if(other !== el && !other.fixo && other.tipo === el.tipo && other.campo === oldName){
+        other.campo = newName;
       }
-    });
+    }));
+    _renderImported(cur);
+    _buildImportedThumbs();
+    _scheduleAutoSave();
+    // refletir o "campo - slide N" do typoFieldName, ou só "campo" no img panel
+    if(spanEl.id === 'typoFieldName'){
+      spanEl.textContent = newName + ' - slide ' + (cur + 1);
+    } else {
+      spanEl.textContent = newName;
+    }
+    if(typeof _toast === 'function') _toast('Renomeado para "' + newName + '"', 'success');
+  }
+
+  spanEl.addEventListener('blur', () => finish(false), { once: true });
+  spanEl.addEventListener('keydown', e => {
+    if(e.key === 'Enter'){ e.preventDefault(); spanEl.blur(); }
+    else if(e.key === 'Escape'){ e.preventDefault(); finish(true); spanEl.blur(); }
+    e.stopPropagation();
   });
 }
 
@@ -4794,6 +4934,44 @@ function tmplDuplicateSlide() {
   goSlide(cur + 1);
   _buildImportedThumbs();
   document.getElementById('totSlides').textContent = importedTemplate.slides.length;
+}
+
+// Duplica o elemento atualmente selecionado (texto, imagem ou sticker) no slide atual.
+// Retorna true se duplicou; false se não havia seleção (chamador pode então duplicar o slide inteiro).
+function _tmplDuplicateSelected(){
+  if(!_isTemplateMode || !importedTemplate) return false;
+  const s = importedTemplate.slides[cur];
+  if(!s) return false;
+  let idx = -1;
+  if(typeof selImg !== 'undefined' && selImg) idx = selImg.bIdx;
+  else if(typeof selTxt !== 'undefined' && selTxt) idx = selTxt.bIdx;
+  else if(typeof _selSticker !== 'undefined' && _selSticker) idx = _selSticker.ei;
+  else return false;
+
+  const src = s.elementos[idx];
+  if(!src) return false;
+
+  const clone = JSON.parse(JSON.stringify(src));
+  // offset visual pra deixar claro que é uma cópia
+  if(typeof clone.x === 'number') clone.x += 20;
+  if(typeof clone.y === 'number') clone.y += 20;
+  // renomeia o campo pra não duplicar identidade (mantém prefixo + próximo número)
+  if(clone.campo && !clone.fixo){
+    const prefix = clone.campo.replace(/\d+$/, '');
+    const allEls = [];
+    importedTemplate.slides.forEach(sl => (sl.elementos||[]).forEach(e=>allEls.push(e)));
+    const count = allEls.filter(e=>e.campo && e.campo.replace(/\d+$/,'')===prefix && !e.fixo).length;
+    clone.campo = prefix + (count + 1);
+  }
+  // imagens: não carregar a imagem duplicada (mantém o slot vazio)
+  if(clone.tipo === 'img') delete clone.imagemSrc;
+
+  s.elementos.push(clone);
+  _renderImported(cur);
+  _buildImportedThumbs();
+  _scheduleAutoSave();
+  if(typeof _toast === 'function') _toast('Elemento duplicado', 'success');
+  return true;
 }
 
 

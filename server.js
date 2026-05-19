@@ -14,16 +14,33 @@ function ensureDataDir() {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 }
 
+// Escrita atômica: grava em .tmp, faz backup do arquivo atual em .bak,
+// e renomeia .tmp -> arquivo (rename é atômico no SO). Protege contra
+// truncamento por crash/Ctrl+C no meio da escrita.
+function writeJsonAtomic(file, data) {
+  ensureDataDir();
+  const tmp = file + '.tmp';
+  const bak = file + '.bak';
+  fs.writeFileSync(tmp, JSON.stringify(data, null, 2));
+  if (fs.existsSync(file)) {
+    try { fs.copyFileSync(file, bak); }
+    catch (e) { console.error('[backup] falha ao salvar .bak de', file, '-', e.message); }
+  }
+  fs.renameSync(tmp, file);
+}
+
 function readTemplates() {
   ensureDataDir();
   if (!fs.existsSync(TEMPLATES_DB)) return [];
   try { return JSON.parse(fs.readFileSync(TEMPLATES_DB, 'utf8')); }
-  catch (e) { return []; }
+  catch (e) {
+    console.error('[readTemplates] arquivo corrompido em', TEMPLATES_DB, '-', e.message);
+    return [];
+  }
 }
 
 function writeTemplates(list) {
-  ensureDataDir();
-  fs.writeFileSync(TEMPLATES_DB, JSON.stringify(list, null, 2));
+  writeJsonAtomic(TEMPLATES_DB, list);
 }
 
 // ── Middleware ──────────────────────────────────────────────────────────────
@@ -39,11 +56,13 @@ function readStickers() {
   ensureDataDir();
   if (!fs.existsSync(STICKERS_DB)) return [];
   try { return JSON.parse(fs.readFileSync(STICKERS_DB, 'utf8')); }
-  catch(e) { return []; }
+  catch(e) {
+    console.error('[readStickers] arquivo corrompido em', STICKERS_DB, '-', e.message);
+    return [];
+  }
 }
 function writeStickers(list) {
-  ensureDataDir();
-  fs.writeFileSync(STICKERS_DB, JSON.stringify(list, null, 2));
+  writeJsonAtomic(STICKERS_DB, list);
 }
 
 app.get('/api/stickers', (_req, res) => {
@@ -173,7 +192,11 @@ const PALETTES_DB = path.join(DATA_DIR, 'palettes.json');
 function readPalettes() {
   ensureDataDir();
   if (!fs.existsSync(PALETTES_DB)) return [];
-  try { return JSON.parse(fs.readFileSync(PALETTES_DB, 'utf8')); } catch(e) { return []; }
+  try { return JSON.parse(fs.readFileSync(PALETTES_DB, 'utf8')); }
+  catch(e) {
+    console.error('[readPalettes] arquivo corrompido em', PALETTES_DB, '-', e.message);
+    return [];
+  }
 }
 
 app.get('/api/palettes', (_req, res) => {
@@ -183,9 +206,11 @@ app.get('/api/palettes', (_req, res) => {
 
 app.post('/api/palettes', (req, res) => {
   try {
-    const list = Array.isArray(req.body) ? req.body : [];
-    fs.writeFileSync(PALETTES_DB, JSON.stringify(list, null, 2));
-    res.json({ ok: true, count: list.length });
+    if (!Array.isArray(req.body)) {
+      return res.status(400).json({ error: 'esperava array de paletas no corpo da requisição' });
+    }
+    writeJsonAtomic(PALETTES_DB, req.body);
+    res.json({ ok: true, count: req.body.length });
   } catch(err) { res.status(500).json({ error: err.message }); }
 });
 

@@ -1,0 +1,3 @@
+# Backups e temporários gerados pela escrita atômica em data/
+data/*.bak
+data/*.tmp
